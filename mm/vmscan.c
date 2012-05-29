@@ -2120,7 +2120,11 @@ static unsigned long do_try_to_free_pages(struct zonelist *zonelist,
 	do {
 		vmpressure_prio(sc->gfp_mask, sc->target_mem_cgroup, sc->priority);
 		sc->nr_scanned = 0;
+<<<<<<< HEAD
 		aborted_reclaim = shrink_zones(zonelist, sc);
+=======
+		aborted_reclaim = shrink_zones(priority, zonelist, sc);
+>>>>>>> 260a26e... mm: remove swap token code
 
 		/*
 		 * Don't shrink slabs when reclaiming memory from
