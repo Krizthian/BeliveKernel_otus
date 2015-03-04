@@ -14,7 +14,11 @@ obj-y			:= filemap.o mempool.o oom_kill.o fadvise.o \
 			   prio_tree.o util.o mmzone.o vmstat.o backing-dev.o \
 			   page_isolation.o mm_init.o mmu_context.o percpu.o \
 			   compaction.o $(mmu-y) \
+<<<<<<< HEAD
 			   showmem.o vmpressure.o
+=======
+			   vmpressure.o
+>>>>>>> 9f49013... mm: vmpressure: allow in-kernel clients to subscribe for events
 
 obj-y += init-mm.o
 
