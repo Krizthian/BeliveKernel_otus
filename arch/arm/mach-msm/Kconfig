@@ -3170,10 +3170,21 @@ config PM_DEBUG_WAKEUP
     default n
     bool "Report wakeup source in a uevent"
 
+<<<<<<< HEAD
 config FORCE_FAST_CHARGE
 	bool "Force AC charge mode at will"
 	default y
 	help
 		A simple sysfs interface to force adapters that
 		are detected as USB to charge as AC.
+=======
+config INTELLI_HOTPLUG
+	bool "Intelli hotplug driver"
+	depends on HOTPLUG_CPU
+	default y
+	help
+	  An intelligent cpu hotplug driver for
+	  Low Latency Frequency Transition capable processors.
+
+>>>>>>> b3d6147... msm: intelli_hotplug: Add Intelli Hotplug driver
 endif
