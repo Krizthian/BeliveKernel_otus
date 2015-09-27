@@ -424,13 +424,7 @@ writeback_single_inode(struct inode *inode, struct bdi_writeback *wb,
 	 * write_inode()
 	 */
 	spin_lock(&inode->i_lock);
-<<<<<<< HEAD
 
-=======
-	/* Clear I_DIRTY_PAGES if we've written out all dirty pages */
-	if (!mapping_tagged(mapping, PAGECACHE_TAG_DIRTY))
-		inode->i_state &= ~I_DIRTY_PAGES;
->>>>>>> f1e369c... writeback: Move I_DIRTY_PAGES handling
 	dirty = inode->i_state & I_DIRTY;
 	inode->i_state &= ~I_DIRTY;
 
