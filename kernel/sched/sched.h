@@ -365,14 +365,6 @@ struct rq {
 #endif
 	int skip_clock_update;
 
-<<<<<<< HEAD
-=======
-	u64 nr_last_stamp;
-	unsigned int ave_nr_running;
-	seqcount_t ave_seqcnt;
-
-
->>>>>>> f115623... Introduce Intelli plug 3.7
 	/* capture load from *all* tasks on this cpu: */
 	struct load_weight load;
 	unsigned long nr_load_updates;
