@@ -209,18 +209,14 @@ int min_free_normal_offset[2] = {
 	 0,
 	 0,
 };
-<<<<<<< HEAD
 int min_free_order_shift = 4;
-=======
-int min_free_order_shift = 2;
->>>>>>> 539e9de... mm: Final update for VMTweaks
 
 /*
  * Extra memory for the system to try freeing. Used to temporarily
  * free memory, to make space for new workloads. Anyone can allocate
  * down to the min watermarks controlled by min_free_kbytes above.
  */
-int extra_free_kbytes = 6075;
+int extra_free_kbytes = 0;
 
 static unsigned long __meminitdata nr_kernel_pages;
 static unsigned long __meminitdata nr_all_pages;

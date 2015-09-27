@@ -68,17 +68,13 @@ static long ratelimit_pages = 32;
 /*
  * Start background writeback (via writeback threads) at this percentage
  */
-<<<<<<< HEAD
 int dirty_background_ratio = 30;
-=======
-int dirty_background_ratio = 10;
->>>>>>> 539e9de... mm: Final update for VMTweaks
 
 /*
  * dirty_background_bytes starts at 0 (disabled) so that it is a function of
  * dirty_background_ratio * the amount of dirtyable memory
  */
-int dirty_background_bytes = 5;
+unsigned long dirty_background_bytes;
 
 /*
  * free highmem will not be subtracted from the total free memory
@@ -89,11 +85,7 @@ int vm_highmem_is_dirtyable;
 /*
  * The generator of dirty data starts writeback at this percentage
  */
-<<<<<<< HEAD
 int vm_dirty_ratio = 30;
-=======
-int vm_dirty_ratio = 10;
->>>>>>> 539e9de... mm: Final update for VMTweaks
 
 /*
  * vm_dirty_bytes starts at 0 (disabled) so that it is a function of
@@ -104,11 +96,7 @@ unsigned long vm_dirty_bytes;
 /*
  * The interval between `kupdate'-style writebacks
  */
-<<<<<<< HEAD
 unsigned int dirty_writeback_interval = 15 * 100; /* centiseconds */
-=======
-unsigned int dirty_writeback_interval = 5 * 100; /* centiseconds */
->>>>>>> 539e9de... mm: Final update for VMTweaks
 
 EXPORT_SYMBOL_GPL(dirty_writeback_interval);
 
