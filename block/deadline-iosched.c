@@ -18,15 +18,9 @@
  * See Documentation/block/deadline-iosched.txt
  */
 static const int read_expire = HZ / 4;  /* max time before a read is submitted. */
-<<<<<<< HEAD
 static const int write_expire = 5 * HZ; /* ditto for writes, these limits are SOFT! */
 static const int writes_starved = 4;    /* max times reads can starve a write */
 static const int fifo_batch = 1;       /* # of sequential requests treated as one
-=======
-static const int write_expire = 2 * HZ; /* ditto for writes, these limits are SOFT! */
-static const int writes_starved = 1;    /* max times reads can starve a write */
-static const int fifo_batch = 8;       /* # of sequential requests treated as one
->>>>>>> d113a47... block: deadline: Optimize for non-rotational
 				     by the above parameters. For throughput. */
 
 struct deadline_data {
