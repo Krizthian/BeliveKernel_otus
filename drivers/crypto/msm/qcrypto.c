@@ -1621,10 +1621,7 @@ static int _qcrypto_process_aead(struct  crypto_engine *pengine,
 
 	return ret;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 7cf857b... msm: qcrypto: remove duplicate define for list_next_entry
 static struct crypto_engine *_qcrypto_static_assign_engine(
 					struct crypto_priv *cp)
 {
