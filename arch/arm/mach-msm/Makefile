@@ -437,10 +437,3 @@ obj-$(CONFIG_FORCE_FAST_CHARGE) += fastchg.o
 obj-$(CONFIG_MMI_MSM_PINMUX) += mmi-pinmux.o
 obj-$(CONFIG_PM_DEBUG) += pm_debug.o
 obj-$(CONFIG_MMI_MSM_CLOCK) += mmi-clock.o
-<<<<<<< HEAD
-=======
-obj-$(CONFIG_MMI_UNIT_INFO) += mmi-lpm.o
-obj-$(CONFIG_BRICKED_HOTPLUG) += bricked_hotplug.o
-obj-$(CONFIG_INTELLI_HOTPLUG) += intelli_hotplug.o
-
->>>>>>> b3d6147... msm: intelli_hotplug: Add Intelli Hotplug driver
