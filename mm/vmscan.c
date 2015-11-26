@@ -133,7 +133,7 @@ struct mem_cgroup_zone {
 /*
  * From 0 .. 100.  Higher means more swappy.
  */
-int vm_swappiness = 30;
+int vm_swappiness = 0;
 long vm_total_pages;	/* The total number of pages which the VM controls */
 
 static LIST_HEAD(shrinker_list);
@@ -2120,11 +2120,7 @@ static unsigned long do_try_to_free_pages(struct zonelist *zonelist,
 	do {
 		vmpressure_prio(sc->gfp_mask, sc->target_mem_cgroup, sc->priority);
 		sc->nr_scanned = 0;
-<<<<<<< HEAD
 		aborted_reclaim = shrink_zones(zonelist, sc);
-=======
-		aborted_reclaim = shrink_zones(priority, zonelist, sc);
->>>>>>> 260a26e... mm: remove swap token code
 
 		/*
 		 * Don't shrink slabs when reclaiming memory from
